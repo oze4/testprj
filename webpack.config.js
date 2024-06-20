@@ -40,10 +40,12 @@ module.exports = {
             },
             {
                 test: /\.module\.css$/i,
-                use: ['style-loader',
+                use: [
+                    'style-loader',
                     {
                         loader: 'css-loader',
                         options: {
+                            esModule: false,
                             importLoaders: 1,
                             modules: true
                         }
